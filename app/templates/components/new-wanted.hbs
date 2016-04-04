@@ -1,1 +1,32 @@
-{{yield}}
+{{#if addNewWanted}}
+  <h3>Add a Want to the List</h3>
+    <div>
+      <form>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="want">What is it you want?</label>
+            {{input value=want id="want"}}
+          </div>
+          <div class="input-field col s6">
+            <label for="description">Describe it a little</label>
+            {{input value=description id="description"}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4">
+            <label for="poster">Who are you?</label>
+            {{input value=poster id="poster"}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4">
+            <label for="offer">What are you offering?</label>
+            {{input value=offer id="offer"}}
+          </div>
+        </div>
+        <button {{action 'save1'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+  <button {{action 'wantedFormShow'}}>Post A New Want</button>
+{{/if}}

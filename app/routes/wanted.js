@@ -2,9 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('wanted', params.wanted_id);
+  return this.store.findRecord('wanted', params.wanted_id);
   },
-  update(wanted, params) {
+  actions: {
+    update(wanted, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined && params[key]!=="") {
           wanted.set(key,params[key]);
@@ -17,4 +18,5 @@ export default Ember.Route.extend({
       wanted.destroyRecord();
       this.transitionTo('index');
     }
+  }
 });

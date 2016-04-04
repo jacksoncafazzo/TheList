@@ -6,4 +6,11 @@ export default Ember.Route.extend({
       wanteds: this.store.findAll('wanted'),
     });
   },
+  actions: {
+    save3(params) {
+      var newWanted = this.store.createRecord('wanted', params);
+      newWanted.save();
+      this.transitionTo('index');
+    }
+  }
 });
