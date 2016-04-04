@@ -13,6 +13,7 @@ export default Ember.Component.extend({
     },
     delete(wanted) {
     if (confirm('Are you sure you want to delete this wanted?')) {
+      console.log(wanted);
       this.sendAction('destroyWanted', wanted);
       }
     },

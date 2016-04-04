@@ -1,6 +1,9 @@
 {{#md-card-collapsible class="popout"}}
   {{#each model as |wanted|}}
     {{#md-collapsible icon="mdi-image-filter-drama" title=wanted.want}}
+      {{#link-to 'wanted' wanted.id}}
+        {{wanted.want}}
+      {{/link-to}}
       {{wanted.description}}<br>
       Posted by: {{wanted.poster}}<br>
       At: {{formatDate wanted.posted}}<br>

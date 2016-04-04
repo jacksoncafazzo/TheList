@@ -2,7 +2,8 @@
   {{#md-card-content}}
     Description: {{wanted.description}}<br>
     Offer: {{wanted.offer}}<br>
-    Posted: {{formattedDate}}
+    Posted: {{formatDate wanted.posted}}
   {{/md-card-content}}
 {{/md-card}}
 {{update-wanted wanted=wanted update=update}}
+<a class="waves-effect waves-light btn" {{action 'delete' wanted}}>Delete</a>
