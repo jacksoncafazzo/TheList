@@ -3,7 +3,7 @@
     {{#md-collapsible icon="mdi-image-filter-drama" title=wanted.want}}
       {{wanted.description}}<br>
       Posted by: {{wanted.poster}}<br>
-      At: {{wanted.posted}}<br>
+      At: {{formatDate wanted.posted}}<br>
       Offering: {{wanted.offer}}
       {{#link-to 'wanted' wanted.id}}Edit details{{/link-to}}
     {{/md-collapsible}}
