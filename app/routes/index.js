@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model(){
     return Ember.RSVP.hash({
       wanteds: this.store.findAll('wanted'),
+      forsales: this.store.findAll('forsale')
     });
   },
   actions: {

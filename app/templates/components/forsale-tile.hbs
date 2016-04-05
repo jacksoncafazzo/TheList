@@ -1,0 +1,15 @@
+{{#md-card-collapsible class="popout"}}
+  {{#each model as |forsale|}}
+    {{#md-collapsible icon="mdi-image-filter-drama" title=forsale.item}}
+      {{#link-to 'forsale' forsale.id}}
+        {{forsale.item}}
+      {{/link-to}}
+      {{forsale.description}}<br>
+      Condition: {{forsale.condition}}<br>
+      Price: {{forsale.offer}}
+      Posted by: {{forsale.poster}}<br>
+      At: {{formatDate forsale.posted}}<br>
+      {{#link-to 'forsale' forsale.id}}Edit details{{/link-to}}
+    {{/md-collapsible}}
+  {{/each}}
+{{/md-card-collapsible}}
