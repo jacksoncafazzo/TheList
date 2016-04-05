@@ -1,0 +1,11 @@
+{{#md-card title=forsale.item id="forsale-details"}}
+  {{#md-card-content}}
+    Description: {{forsale.description}}<br>
+    Condition: {{forsale.condition}}<br>
+    Price: {{forsale.price}}<br>
+    Poster: {{forsale.poster}}
+    Posted: {{formatDate forsale.posted}}
+  {{/md-card-content}}
+{{/md-card}}
+{{update-forsale forsale=forsale update=update}}
+<a class="waves-effect waves-light btn" {{action 'delete' forsale}}>Delete</a>

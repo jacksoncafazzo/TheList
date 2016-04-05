@@ -1,0 +1,37 @@
+{{#if addNewForSale}}
+  <h3>Got an item for sale?</h3>
+    <div>
+      <form>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="item">What is it you want to sell?</label>
+            {{input value=item id="item"}}
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <label for="poster">Who are you?</label>
+              {{input value=poster id="poster"}}
+            </div>
+          </div>
+          <div class="input-field col s12">
+            <label for="description">Describe it a little</label>
+            {{input value=description id="description"}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <label for="condition">Item condition</label>
+            {{input value=condition id="condition"}}
+          </div>
+          <div class="input-field col s6">
+            <label for="price">What is the asking price?</label>
+            {{input value=price id="price"}}
+          </div>
+        </div>
+
+        <button {{action 'save1'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+  <a class="waves-effect waves-light btn" {{action 'forsaleFormShow'}}>Post A New Item for Sale</a>
+{{/if}}

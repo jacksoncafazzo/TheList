@@ -3,26 +3,25 @@
   <form>
     <div class="row">
       <div class="input-field col s6">
-        <label for="want">What is it you want?</label>
+        <label for="want">{{wanted.want}}</label>
         {{input value=want id="want"}}
       </div>
       <div class="input-field col s6">
-        <label for="description">Describe it a little</label>
+        <label for="description">{{wanted.description}}</label>
         {{input value=description id="description"}}
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s4">
-        <label for="poster">Who are you?</label>
+      <div class="input-field col s6">
+        <label for="poster">{{wanted.poster}}</label>
         {{input value=poster id="poster"}}
       </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s4">
-        <label for="offer">What are you offering?</label>
+      <div class="input-field col s6">
+        <label for="offer">{{wanted.offer}}</label>
         {{input value=offer id="offer"}}
       </div>
     </div>
+
     <a class="waves-effect waves-light btn" {{action 'update' wanted}}>Update</a>
   </form>
 {{else}}

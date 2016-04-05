@@ -8,9 +8,14 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    save3(params) {
+    saveWanted(params) {
       var newWanted = this.store.createRecord('wanted', params);
       newWanted.save();
+      this.transitionTo('index');
+    },
+    saveForSale(params) {
+      var newForSale = this.store.createRecord('forsale', params);
+      newForSale.save();
       this.transitionTo('index');
     }
   }

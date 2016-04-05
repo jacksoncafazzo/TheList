@@ -5,7 +5,15 @@
     {{wanted-tile model=model.wanteds}}
     {{/md-card-content}}
     {{/md-card}}
-    {{new-wanted save2="save3"}}
+    {{new-wanted save2="saveWanted"}}
+  </div>
+  <div class="col s6">
+    {{#md-card title="for sale" id="forsale"}}
+    {{#md-card-content}}
+    {{forsale-tile model=model.forsales}}
+    {{/md-card-content}}
+    {{/md-card}}
+    {{new-forsale save2="saveForSale"}}
   </div>
 
 </div>
